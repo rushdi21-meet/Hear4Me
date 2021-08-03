@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+    <title></title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<script>
+    function search() {
+    //get input value
+    const input = document.getElementById('filter').value.toUpperCase();
+    const cardContainer = document.getElementById('card-lists');
+    //console.log(cardContainer);
+
+    const cards = cardContainer.getElementsByClassName('card');
+    //console.log(cards);
+
+
+    for(let i = 0; i < cards.length; i++){
+        let title = cards[i].querySelector(".card-body p.card-title");
+        //console.log(title);
+        //Check if input is similar to paragraph in the card
+        if(title.innerText.toUpperCase().indexOf(input) > -1){
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+
+</script>
+
+<body>
+    <div><img src = "assets/img/a_2.png" alt="" class="center"></div>
+        <!--Therapists searchbar-->
+
+    <div class="container">
+        <div class="input-filter">
+            <input type="text" name="" id="filter" class="filter" placeholder=
+            "Search Keywords" onkeyup="search()">
+        </div>
+
+        <!--All of the cards for bootstrap-->
+
+        <div class="card-lists" id="card-lists">
+            <div class="row">
+                <div class="card">
+                    <img src="assets/img/a_1.jpg" alt="image">
+                    <div class="card-body">
+                        <h5 class="card-title">Jake Bourne</h5>
+                        <h6 class="card-title">Tel Aviv</h6>
+                        <p class="card-title">Specializes in anxiety and depression</p>
+                        <p class="card-title">Email: jake.bourne@gmail.com<br>Phone: 0982429834</p>
+
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/img/a_1.jpg" alt="image">
+                    <div class="card-body">
+                        <h5 class="card-title">Darin Moody</h5>
+                        <h6 class="card-title">Jerusalem</h6>
+                        <p class="card-title">Specializes in suicide and depression</p>
+                        <p class="card-title">Email: darin.moody@gmail.com<br>Phone: 0988327234</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/img/a_1.jpg" alt="image">
+                    <div class="card-body">
+                        <h5 class="card-title">Beth Black</h5>
+                        <h6 class="card-title">Tel Aviv</h6>
+                        <p class="card-title">Specializes in violence help, harassments and phobias</p>
+                        <p class="card-title">Email: beth.black@gmail.com<br>Phone: 0283764464</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/img/a_1.jpg" alt="image">
+                    <div class="card-body">
+                        <h5 class="card-title">Luka Arellano</h5>
+                        <h6 class="card-title">Haifa</h6>
+                        <p class="card-title">Specializes in general mental help and eating disorders.</p>
+                        <p class="card-title">Email: luka.arellano@gmail.com<br>Phone: 0293864834</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/img/a_1.jpg" alt="image">
+                    <div class="card-body">
+                        <h5 class="card-title">John McCallum</h5>
+                        <h6 class="card-title">Tel Aviv</h6>
+                        <p class="card-title">Specializes in anxiety, depression, harassments and suicide</p>
+                        <p class="card-title">Email: john.mccallum@gmail.com<br>Phone: 0938746334</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/img/a_1.jpg" alt="image">
+                    <div class="card-body">
+                        <h5 class="card-title">Damian Russ</h5>
+                        <h6 class="card-title">Nazareth</h6>
+                        <p class="card-title">Specializes in depression and eating disorders</p>
+                        <p class="card-title">Email: Damian.russ@gmail.com<br>Phone: 0529387894</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+
+
+
+</body>
+<style>
+    .card {
+    width:18rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(12, 16, 31, 0.4);
+    margin: 20px 40px;
+
+
+}
+
+
+input{
+    border: 1px solid #333;
+    font-size: 18px;
+    padding: 12px 10px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+h1{
+    background-color: #6BD1EF;
+    color: #0C576E;
+    height: 4rem;
+}
+
+.card{
+    display: flex;
+    flex-grow: 2;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20rem;
+}
+</style>
+</html>
