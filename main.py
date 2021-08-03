@@ -25,13 +25,9 @@ def main():
             login_session['logged_in'] = True
             login_session['name'] = username
             return redirect(url_for('volunteer', login_session=login_session))
-        print("main if")
-        print(login_session['logged_in'])
         return render_template('index.html')
     else:
         login_session['logged_in'] = False
-        print("main else")
-        print(login_session['logged_in'])
         return render_template('index.html')
 
 
@@ -39,12 +35,9 @@ def main():
 @app.route('/volunteer', methods=['GET', 'POST'])
 def volunteer():
     if login_session['logged_in']:
-        print(login_session['logged_in'])
         return render_template('a_main.html')
     else:
         return redirect(url_for('main'))
-    print("volunteer")
-    print(login_session['logged_in'])
 
 
 # Press the green button in the gutter to run the script.

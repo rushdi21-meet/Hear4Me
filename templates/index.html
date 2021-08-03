@@ -3,6 +3,44 @@
 
 <head>
       <style>
+        .flip-card {
+          background-color: transparent;
+          width: 300px;
+          height: 300px;
+          perspective: 1000px;
+        }
+
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card:hover .flip-card-inner {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+          color: black;
+        }
+
+        .flip-card-back {
+          background-color: #0C576E;
+          color: white;
+          transform: rotateY(180deg);
+        }
         form {
           display: flex;
           justify-content: center;
@@ -102,6 +140,7 @@
       <nav id="navbar" class="navbar" >
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto active" href="#service">Our Services</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Log-in</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
@@ -142,6 +181,80 @@
   </section><!-- End Hero -->
 
   <main id="main">
+    <br>
+
+        <!-- ======= Service Section ======= -->
+    <section id="service" class="service">
+      <div class="container">
+        <h2 style="color: #0C576E;" align="center"><b>Our Service</b></h2><br><br>
+        <div class="row">
+          <div class="flip-card" style="width:15rem; margin-left:5em; align-items: center;">
+            <div class="flip-card-inner" style="box-shadow: 0.5px 0.5px 0.5px grey;">
+              <div class="flip-card-front"style="background-color:#18ABDC;">
+                <br><br><br><h1>Call Us!</h1>
+                <img src="assets/img/phone1.png" style="width:5rem;">
+              </div>
+              <div class="flip-card-back">
+                <br><br><br><br>
+                <h4>Reach out and make the first step to get help.</h4>
+              </div>
+            </div>
+          </div>
+          &nbsp;&nbsp;
+          <div class="flip-card" style="width:15rem;  ">
+            <div class="flip-card-inner" style="box-shadow: 0.5px 0.5px 0.5px grey;">
+              <div class="flip-card-front" style="background-color:#35BCE9;">
+                <br><br><h1>Fill information</h1>
+                <img src="assets/img/briefing.png" style="width:5rem;">
+              </div>
+              <div class="flip-card-back">
+                <br><br>
+                <h4>Fill our survey to help us make sure you are safe, and contact you later your information is secure and wll not be shared.</h4>
+              </div>
+            </div>
+          </div>
+          &nbsp;&nbsp;
+          <div class="flip-card" style="width:15rem;  ">
+            <div class="flip-card-inner"style="box-shadow: 0.5px 0.5px 0.5px grey;">
+              <div class="flip-card-front" style="background-color:#6CCEEF;">
+                <br><br><br><h1>Get help</h1>
+                <img src="assets/img/handshake.png" style="width:5rem;">
+              </div>
+              <div class="flip-card-back">
+                <br><br><br>
+                <h4>one of our volunteers will contact you to provide you with the help you need, and get consent from parents.</h4>
+              </div>
+            </div>
+          </div>
+          &nbsp;&nbsp;
+          <div class="flip-card" style="width:15rem; ">
+            <div class="flip-card-inner" style="box-shadow: 0.5px 0.5px 0.5px grey;">
+              <div class="flip-card-front" style="background-color:#A3E0F5;">
+                <br><br><h1>Find your match!</h1>
+                <img src="assets/img/jigsaw.png" style="width:5rem;">
+              </div>
+              <div class="flip-card-back">
+                <br><br><br>
+                <h4>Get matched with a therapist that will be suitable for your situation.</h4>
+              </div>
+            </div>
+          </div>
+          &nbsp;&nbsp;
+          <div class="flip-card" style="width:15rem;">
+            <div class="flip-card-inner" style="position:center; ">
+              <div class="flip-card-front" style="background-color:#C8EDF9;">
+                <br><br>
+                <h1>We check up on You</h1>
+                <img src="assets/img/like.png" style="width:5rem;">
+              </div>
+              <div class="flip-card-back">
+                <br><br><br>
+                <h4>Our volunteer will call you after a few days to make sure you got the right help you needed.</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section><!-- End Service Section -->
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -250,7 +363,7 @@ Our startup operates with the help of post-grad psychology students to help teen
                 <h3>Mission</h3>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  to provide teenagers easily accessible mental health care through a website.
+                  To provide teenagers easily accessible mental health care through a website.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
@@ -367,9 +480,9 @@ Our startup operates with the help of post-grad psychology students to help teen
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch"style="height:40rem;">
-            <div class="member">
-              <div class="member-img">
+          <div class="col-lg-3 col-md-6 flip-card d-flex align-items-stretch"style="height:40rem;">
+            <div class="member flip-card-inner">
+              <div class="member-img flip-card-front">
                 <img src="assets/img/team/Abdrew.jpg" class="img-fluid" style="height:30rem;" alt="">
 
               </div>
