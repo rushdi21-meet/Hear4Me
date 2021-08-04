@@ -39,6 +39,19 @@ def volunteer():
     else:
         return redirect(url_for('main'))
 
+@app.route('/volunteer_ar')
+def volunteer_ar():
+    if login_session['logged_in']:
+        return render_template('main-ar.html')
+    else:
+        return redirect(url_for('main'))
+
+@app.route('/volunteer_he')
+def volunteer_he():
+    if login_session['logged_in']:
+        return render_template('main-he.html')
+    else:
+        return redirect(url_for('main'))
 
 # Press the green button in the gutter to run the script.
 if __name__ == "__main__":  # Makes sure this is the main process

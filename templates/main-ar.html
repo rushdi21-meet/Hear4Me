@@ -29,14 +29,13 @@
             cards[i].style.display = "none";
         }
     }
-
 }
 
 </script>
 
 <body>
     <div><img src = "assets/img/a_2.png" alt="" class="center">
-    <a href="{{url_for('volunteer_ar')}}">AR</a>
+    <a href="{{url_for('volunteer')}}">EN</a>
     <a href="{{url_for('volunteer_he')}}">HE</a>
     </div>
         <!--Therapists searchbar-->
@@ -44,9 +43,8 @@
     <div class="container">
         <div class="input-filter">
             <input type="text" name="" id="filter" class="filter" placeholder=
-            "Search Keywords" onkeyup="search()">
+            "كلمات البحث" onkeyup="search()">
         </div>
-
 
         <!--All of the cards for bootstrap-->
 
@@ -55,9 +53,9 @@
                 <div class="card">
                     <img src="assets/img/a_1.jpg" alt="image">
                     <div class="card-body">
-                        <h5 class="card-title">Jake Bourne</h5>
-                        <h6 class="card-title">Tel Aviv</h6>
-                        <p class="card-title">Specializes in anxiety and depression</p>
+                        <h5 class="card-title">جيك بورن</h5>
+                        <h6 class="card-title">تل أبيب</h6>
+                        <p class="card-title" style="text-align: right;">متخصص في القلق والاكتئاب</p>
                         <p class="card-title">Email: jake.bourne@gmail.com<br>Phone: 0982429834</p>
 
                     </div>
@@ -66,9 +64,9 @@
                 <div class="card">
                     <img src="assets/img/a_1.jpg" alt="image">
                     <div class="card-body">
-                        <h5 class="card-title">Darin Moody</h5>
-                        <h6 class="card-title">Jerusalem</h6>
-                        <p class="card-title">Specializes in suicide and depression</p>
+                        <h5 class="card-title">دارين مودي</h5>
+                        <h6 class="card-title">القدس</h6>
+                        <p class="card-title" style="text-align: right;">متخصص في الانتحار والاكتئاب</p>
                         <p class="card-title">Email: darin.moody@gmail.com<br>Phone: 0988327234</p>
                     </div>
                 </div>
@@ -76,9 +74,9 @@
                 <div class="card">
                     <img src="assets/img/a_1.jpg" alt="image">
                     <div class="card-body">
-                        <h5 class="card-title">Beth Black</h5>
-                        <h6 class="card-title">Tel Aviv</h6>
-                        <p class="card-title">Specializes in violence help, harassments and phobias</p>
+                        <h5 class="card-title">بيث بلاك</h5>
+                        <h6 class="card-title">تل أبيب</h6>
+                        <p class="card-title" style="text-align: right;">متخصص في المساعدة في العنف والتحرش والرهاب</p>
                         <p class="card-title">Email: beth.black@gmail.com<br>Phone: 0283764464</p>
                     </div>
                 </div>
@@ -86,9 +84,9 @@
                 <div class="card">
                     <img src="assets/img/a_1.jpg" alt="image">
                     <div class="card-body">
-                        <h5 class="card-title">Luka Arellano</h5>
-                        <h6 class="card-title">Haifa</h6>
-                        <p class="card-title">Specializes in general mental help and eating disorders.</p>
+                        <h5 class="card-title">لوكا أريلانو</h5>
+                        <h6 class="card-title">حيفا</h6>
+                        <p class="card-title" style="text-align: right;">متخصص في المساعدة النفسية العامة واضطرابات الأكل</p>
                         <p class="card-title">Email: luka.arellano@gmail.com<br>Phone: 0293864834</p>
                     </div>
                 </div>
@@ -96,9 +94,9 @@
                 <div class="card">
                     <img src="assets/img/a_1.jpg" alt="image">
                     <div class="card-body">
-                        <h5 class="card-title">John McCallum</h5>
-                        <h6 class="card-title">Tel Aviv</h6>
-                        <p class="card-title">Specializes in anxiety, depression, harassments and suicide</p>
+                        <h5 class="card-title">جون مكالوم</h5>
+                        <h6 class="card-title">تل أبيب</h6>
+                        <p class="card-title" style="text-align: right;">متخصص في القلق والاكتئاب والتحرش والانتحار</p>
                         <p class="card-title">Email: john.mccallum@gmail.com<br>Phone: 0938746334</p>
                     </div>
                 </div>
@@ -106,9 +104,9 @@
                 <div class="card">
                     <img src="assets/img/a_1.jpg" alt="image">
                     <div class="card-body">
-                        <h5 class="card-title">Damian Russ</h5>
-                        <h6 class="card-title">Nazareth</h6>
-                        <p class="card-title">Specializes in depression and eating disorders</p>
+                        <h5 class="card-title">داميان روس</h5>
+                        <h6 class="card-title">الناصرة</h6>
+                        <p class="card-title" style="text-align: right;">متخصص في الاكتئاب واضطرابات الأكل</p>
                         <p class="card-title">Email: Damian.russ@gmail.com<br>Phone: 0529387894</p>
                     </div>
                 </div>
@@ -170,5 +168,18 @@ a:link, a:visited {
 a:hover, a:active {
     background-color:#99EEEE ;
   }
+
+  h5, h6{
+    text-align: right;
+}
+input[type="text"]::placeholder {
+
+                /* Firefox, Chrome, Opera */
+                text-align: right;
+            }
+input {
+    text-align: right;
+}
+
 </style>
 </html>
