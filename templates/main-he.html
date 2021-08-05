@@ -36,15 +36,17 @@
 
 <body>
     <div><img src = "assets/img/a_2.png" alt="" class="center">
-    <a href="{{url_for('volunteer_ar')}}">AR</a>
-    <a href="{{url_for('volunteer')}}">EN</a>
     </div>
         <!--Therapists searchbar-->
 
     <div class="container">
         <div class="input-filter">
-            <input type="text" name="" id="filter" class="filter" placeholder=
-            "חפש" onkeyup="search()">
+            <div class="row">
+                <input class="col-md-9 col-lg-9 col-xl-9 col-sm-9 col-xs-9" type="text" name="" id="filter" class="filter" placeholder=
+                "חפש" onkeyup="search()">&nbsp;&nbsp;
+                <a class="col-md-1 col-lg-1 col-xl-1 col-sm-1 col-xs-1" style="margin:0.2em; height:51px;" href="{{url_for('volunteer_ar')}}"><b>AR</b></a>
+                <a class="col-md-1 col-lg-1 col-xl-1 col-sm-1 col-xs-1" style="margin:0.2em; height:51px;" href="{{url_for('volunteer')}}"><b>EN</b></a>
+            </div>
         </div>
 
 
@@ -58,7 +60,7 @@
                         <h5 class="card-title">ג'ייק בורן</h5>
                         <h6 class="card-title">תל אביב</h6>
                         <p class="card-title" style="text-align: right;">מתמחה בחרדות ודיכאון</p>
-                        <p class="card-title">Email: jake.bourne@gmail.com<br>Phone: 0982429834</p>
+                        <p class="card-title" style="text-align: right;">jake.bourne@gmail.com: אימייל<br>מספר: 0982429834</p>
 
                     </div>
                 </div>
@@ -68,18 +70,18 @@
                     <div class="card-body">
                         <h5 class="card-title">דרין מודי</h5>
                         <h6 class="card-title">ירושלים</h6>
-                        <p class="card-title" style="text-align: right;">מתמחה בהתאבדות ודיכאון</p>
-                        <p class="card-title">Email: darin.moody@gmail.com<br>Phone: 0988327234</p>
+                        <p class="card-title" style="text-align: right;">מתמחה בהרגשות אובדניות ודיכאון</p>
+                        <p class="card-title" style="text-align: right;">darin.moody@gmail.com: אימייל<br>מספר: 0988327234</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <img src="assets/img/a_1.jpg" alt="image">
                     <div class="card-body">
-                        <h5 class="card-title">בת 'בלאק</h5>
+                        <h5 class="card-title">בת' בלאק</h5>
                         <h6 class="card-title">תל אביב</h6>
-                        <p class="card-title" style="text-align: right;">מתמחה בעזרה באלימות, הטרדות ופוביות</p>
-                        <p class="card-title">Email: beth.black@gmail.com<br>Phone: 0283764464</p>
+                        <p class="card-title" style="text-align: right;">מתמחה הטרדות ופחדים עמוקים</p>
+                        <p class="card-title" style="text-align: right;">beth.black@gmail.com: אימייל<br>מספר: 0283764464</p>
                     </div>
                 </div>
 
@@ -89,7 +91,7 @@
                         <h5 class="card-title">לוקה ארלנו</h5>
                         <h6 class="card-title">חיפה</h6>
                         <p class="card-title" style="text-align: right;">מתמחה בעזרה נפשית כללית והפרעות אכילה</p>
-                        <p class="card-title">Email: luka.arellano@gmail.com<br>Phone: 0293864834</p>
+                        <p class="card-title" style="text-align: right;">luka.arellano@gmail.com: אימייל<br>מספר: 0293864834</p>
                     </div>
                 </div>
 
@@ -99,7 +101,7 @@
                         <h5 class="card-title">ג'ון מקאלום</h5>
                         <h6 class="card-title">תל אביב</h6>
                         <p class="card-title" style="text-align: right;">מתמחה בחרדות, דיכאון, הטרדות והתאבדויות</p>
-                        <p class="card-title">Email: john.mccallum@gmail.com<br>Phone: 0938746334</p>
+                        <p class="card-title" style="text-align: right;">john.mccallum@gmail.com: אימייל<br>מספר: 0938746334</p>
                     </div>
                 </div>
 
@@ -109,7 +111,7 @@
                         <h5 class="card-title">דמיאן ראס</h5>
                         <h6 class="card-title">נצרת</h6>
                         <p class="card-title" style="text-align: right;">מתמחה בדיכאון והפרעות אכילה</p>
-                        <p class="card-title">Email: Damian.russ@gmail.com<br>Phone: 0529387894</p>
+                        <p class="card-title" style="text-align: right;">Damian.russ@gmail.com : אימייל<br>מספר: 0529387894</p>
                     </div>
                 </div>
             </div>

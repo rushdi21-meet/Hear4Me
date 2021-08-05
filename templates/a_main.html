@@ -36,15 +36,17 @@
 
 <body>
     <div><img src = "assets/img/a_2.png" alt="" class="center">
-    <a href="{{url_for('volunteer_ar')}}">AR</a>
-    <a href="{{url_for('volunteer_he')}}">HE</a>
     </div>
         <!--Therapists searchbar-->
 
     <div class="container">
         <div class="input-filter">
-            <input type="text" name="" id="filter" class="filter" placeholder=
-            "Search Keywords" onkeyup="search()">
+            <div class="row">
+                <input class="col-md-9 col-lg-9 col-xl-9 col-sm-9 col-xs-9" type="text" name="" id="filter" class="filter" placeholder=
+                "Search Keywords" onkeyup="search()">&nbsp;&nbsp;
+                <a class="col-md-1 col-lg-1 col-xl-1 col-sm-1 col-xs-1" href="{{url_for('volunteer_ar')}}" style="margin:0.2em; height:51px;"><b>AR</b></a>&nbsp;&nbsp;
+                <a class="col-md-1 col-lg-1 col-xl-1 col-sm-1 col-xs-1" href="{{url_for('volunteer_he')}}" style="margin:0.2em; height:51px;"><b>HE</b></a>
+            </div>
         </div>
 
 
