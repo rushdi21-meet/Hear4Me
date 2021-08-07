@@ -8,6 +8,18 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+@media screen and (max-width: 560px) {
+  #call{
+  font-size:5vw;
+}
+}
+
+@media screen and (min-width: 560px) {
+  #call{
+  font-size:2.7vw;
+}
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;

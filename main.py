@@ -31,6 +31,34 @@ def main():
         return render_template('index.html')
 
 
+@app.route('/ar', methods=['GET', 'POST'])
+def ar():
+    if request.method == 'POST':
+        username = request.form['uname']
+        password = request.form['psw']
+        if query_by_name(username) == query_by_password(password):
+            login_session['logged_in'] = True
+            login_session['name'] = username
+            return redirect(url_for('volunteer_ar', login_session=login_session))
+        return render_template('index_ar.html')
+    else:
+        login_session['logged_in'] = False
+        return render_template('index_ar.html')
+
+
+@app.route('/he', methods=['GET', 'POST'])
+def he():
+    if request.method == 'POST':
+        username = request.form['uname']
+        password = request.form['psw']
+        if query_by_name(username) == query_by_password(password):
+            login_session['logged_in'] = True
+            login_session['name'] = username
+            return redirect(url_for('volunteer_he', login_session=login_session))
+        return render_template('index_he.html')
+    else:
+        login_session['logged_in'] = False
+        return render_template('index_he.html')
 
 @app.route('/volunteer', methods=['GET', 'POST'])
 def volunteer():

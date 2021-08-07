@@ -104,7 +104,7 @@
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/favicon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Dosis:300,400,500,,600,700,700i|Lato:300,300i,400,400i,700,700i" rel="stylesheet">
@@ -145,6 +145,13 @@
           <li><a class="nav-link scrollto" href="#services">Log-in</a></li>
           <li><a class="nav-link scrollto" href="#team">Our Team</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li class="dropdown"><a href="#null"><span>Languages</span> <i class="bi bi-chevron-right"></i></a>
+            <ul>
+              <li><a href="#hero">English</a></li>
+              <li><a href="{{url_for('ar')}}">Arabic</a></li>
+              <li><a href="{{url_for('he')}}">Hebrew</a></li>
+            </ul>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -189,7 +196,7 @@
     <section id="service" class="service">
       <div class="container" align="center">
         <h2 style="color: #0C576E;" align="center"><b>What is the Process</b></h2><br>
-        <h4 align="center">Hoover over the flipping cards to see the details</h4><br>
+        <h4 align="center">Hover over the flipping cards to see the details</h4><br>
         <div class="row justify-content-center d-flex" style="align-content:center;" >
           <div class="flip-card col-md-2 col-lg-2 col-sm-12 col-xs-12" style=" width:15rem; margin:0.5em; align-items: center;">
             <div class="flip-card-inner" style=" border-radius: 25px; box-shadow: 0.5px 0.5px 0.5px grey;">
@@ -242,10 +249,10 @@
             </div>
           </div>
           &nbsp;&nbsp;
-          <div class="flip-card col-lg-2 col-md-2 col-sm-12 col-xs-12" style="width:15rem; margin:0.5em;">
+          <div class="flip-card col-lg-2 col-md-2 col-sm-12 col-xs-12" style=" width:15rem; margin:0.5em;">
             <div class="flip-card-inner" style=" border-radius: 25px; position:center; box-shadow: 0.5px 0.5px 0.5px grey;">
-              <div class="flip-card-front" style=" border-radius: 25px; background-color:#18ABDC;">
-                <br><br>
+              <div class="flip-card-front" style="padding:1rem; border-radius: 25px; background-color:#18ABDC;">
+                <br>
                 <h1>We check up on You</h1>
                 <img src="assets/img/like.png" style="width:5rem;">
               </div>
