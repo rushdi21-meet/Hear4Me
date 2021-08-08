@@ -24,7 +24,8 @@ def main():
         if query_by_name(username) == query_by_password(password):
             login_session['logged_in'] = True
             login_session['name'] = username
-            return redirect(url_for('volunteer', login_session=login_session))
+            #redirect(url_for('volunteer', login_session=login_session))
+            return redirect("https://hear4me.herokuapp.com/volunteer", code=302)
         return render_template('index.html')
     else:
         login_session['logged_in'] = False
@@ -39,7 +40,8 @@ def ar():
         if query_by_name(username) == query_by_password(password):
             login_session['logged_in'] = True
             login_session['name'] = username
-            return redirect(url_for('volunteer_ar', login_session=login_session))
+            return redirect("https://hear4me.herokuapp.com/volunteer_ar", code=302)
+            #return redirect(url_for('volunteer_ar', login_session=login_session))
         return render_template('index_ar.html')
     else:
         login_session['logged_in'] = False
@@ -54,7 +56,8 @@ def he():
         if query_by_name(username) == query_by_password(password):
             login_session['logged_in'] = True
             login_session['name'] = username
-            return redirect(url_for('volunteer_he', login_session=login_session))
+            return redirect("https://hear4me.herokuapp.com/volunteer_he", code=302)
+            #return redirect(url_for('volunteer_he', login_session=login_session))
         return render_template('index_he.html')
     else:
         login_session['logged_in'] = False
@@ -72,14 +75,14 @@ def volunteer_ar():
     if login_session['logged_in']:
         return render_template('main-ar.html')
     else:
-        return redirect(url_for('main'))
+        return redirect(url_for('ar'))
 
 @app.route('/volunteer_he')
 def volunteer_he():
     if login_session['logged_in']:
         return render_template('main-he.html')
     else:
-        return redirect(url_for('main'))
+        return redirect(url_for('he'))
 
 # Press the green button in the gutter to run the script.
 if __name__ == "__main__":  # Makes sure this is the main process
